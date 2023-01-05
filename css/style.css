@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body{
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+color: #000000;
+display: flex;
+justify-content: column;
+align-items: center;
+background-color: #e5e5e5;
+  }
+
+ header{
+height: 92px;
+width: 414px;
+position: fixed;
+left: 0px;
+top: 0px;
+z-index: 1;
+background-color: #CF2B2B;
+box-shadow: 0px 4px 4px 0px #00000040;
+ }
+
+.cabecalho{
+    margin: 6px 145px 0px 19px;
+}
+
+.cabecalho p:nth-child(1) {
+font-family: Righteous;
+font-size: 44px;
+font-weight: 400;
+line-height: 55px;
+letter-spacing: -0.012em;
+text-align: left;
+color: #FFFFFF;
+}
+
+.cabecalho p:nth-child(2) {
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    }
