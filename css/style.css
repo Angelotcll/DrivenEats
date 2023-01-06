@@ -2,29 +2,43 @@
     box-sizing: border-box;
   }
 
+h1,h2{
+  font-family: Righteous;
+  font-weight: 400;
+  text-align: left;
+}
+
   body{
-font-family: Roboto;
-font-size: 16px;
-font-weight: 400;
-line-height: 19px;
-letter-spacing: 0em;
-text-align: left;
-color: #000000;
-display: flex;
-justify-content: column;
-align-items: center;
-background-color: #e5e5e5;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #000000;
+    background-color: #e5e5e5;
+    
   }
 
+  .mobile{
+    width: 414px;
+    display: flex;
+    justify-content: column;
+    background-color: aqua;
+    margin-bottom: 16px;
+
+  }
+
+  /* Formatação do cabeçalho*/
+
  header{
-height: 92px;
-width: 414px;
-position: fixed;
-left: 0px;
-top: 0px;
-z-index: 1;
-background-color: #CF2B2B;
-box-shadow: 0px 4px 4px 0px #00000040;
+    height: 92px;
+    width: 414px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background-color: #CF2B2B;
+    box-shadow: 0px 4px 4px 0px #00000040;
  }
 
 .cabecalho{
@@ -32,14 +46,10 @@ box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 h1 {
-font-family: Righteous;
-font-size: 44px;
-font-weight: 400;
-font-size: 44px;
-line-height: 55px;
-letter-spacing: -0.012em;
-text-align: left;
-color: #FFFFFF;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
 }
 
 .cabecalho p {
@@ -47,3 +57,109 @@ color: #FFFFFF;
     line-height: 21px;
     color: #FFFFFF;
   }
+
+  h2{
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    color: #333333;
+    margin-top: 27px;
+  }
+
+
+  /* formatação da main */
+
+  main{
+    padding-top: 92px;
+    padding-left: 19px;
+    margin-bottom: 92px;
+    width: 100%;  
+  }
+
+  section{
+    margin-top: 17px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    overflow-x: scroll;
+  }
+
+  section > div{
+    background-color: #FFFFFF;
+    width: 172px;
+    height: 216px;
+    border-radius: 9px;
+    margin-right: 16px; 
+    padding: 18px 14px 14px 14px;
+    margin-bottom: 5px;
+
+  }
+
+  .item-bebida{
+    height: 202px;
+  }
+
+  .item-sobremesa{
+    height: 197px;
+  }
+
+  img{
+    height: 87px;
+    width: 144px; 
+    border-radius: 4px;
+  }
+
+  h3{
+    font-weight: 700;
+    color: #333333;
+    margin-top: 8px;
+  }
+
+  .descricaoPrato{
+    margin-top: 4px;
+  }
+
+  .descricaoPrato p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    color: #A6A6A6;    
+  }
+
+  .item > p{
+    margin-top: 5px;
+  }
+
+/* Formatação do Rodapé */
+
+footer{
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 92px;
+  background-color: #FFFFFF;
+  width: 414px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  height: 61px;
+  width: 364px;
+  border-radius: 50px;
+  background-color: #cbcbcb;
+  border: solid 1px #cbcbcb;
+
+}
+
+footer p{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.018em;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
