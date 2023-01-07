@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -10,153 +10,165 @@
     <title>Driven Eats</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    </head>
-<body>  
-
-    <div class="mobile">
-        <header>
-            <div class="cabecalho">
-            <h1>DrivenEats</h1>
-            <p>Sua comida em 6 minutos</p>
-            </div>
-        </header>
-
-        <main>
-        
-        <h2>Primeiro, seu prato </h2>
-        
-        <section>
-
-            <div class="item">
-                    <img src="./img/frango_yin_yang.png" >
-                    <h3>Frango Yin Yang</h3>
-                    
-                    <div class="descricaoPrato">
-                        <p>Um pouco de batata</p>
-                        <p>um pouco de salada</p>
-                    </div>
-
-                    <p>R$ 14,90</p>
-                
-            </div>
-
-            <div class="item">
-                <img src="./img/frango_yin_yang.png" >
-                <h3>Frango Yin Yang</h3>
-                
-                <div class="descricaoPrato">
-                    <p>Um pouco de batata</p>
-                    <p>um pouco de salada</p>
-                </div>
-
-                <p>R$ 18,90</p>
-            </div>
-
-            <div class="item">
-                <img src="./img/frango_yin_yang.png" >
-                <h3>Frango Yin Yang</h3>
-                
-                <div class="descricaoPrato">
-                    <p>Um pouco de batata</p>
-                    <p>um pouco de salada</p>
-                </div>
-
-                <p>R$ 20,90</p>
-            </div>
-        </section>
-
-        <h2>Agora, sua bebida </h2>
-
-        <section >
-
-            <div class="item-bebida" >
-               
-                    <img src="./img/coca-cola.png" >
-                    <h3>Coquinha gelada</h3>
-                    
-                    <div class="descricaoPrato">
-                        <p>350ml</p>
-                    </div>
-
-                    <p class="bebida-sobremesa">R$ 5,90</p>
-               
-            </div>
-
-            <div class="item-bebida">
-                <img src="./img/coca-cola.png" >
-                <h3>Coquinha gelada</h3>
-                
-                <div class="descricaoPrato">
-                    <p>350ml</p>
-                </div>
-
-                <p class="bebida-sobremesa">R$ 4,90</p>
-            </div>
-
-            <div class="item-bebida">
-                <img src="./img/coca-cola.png" >
-                <h3>Coquinha gelada</h3>
-                
-                <div class="descricaoPrato">
-                    <p>350ml</p>
-                </div>
-
-                <p class="bebida-sobremesa">R$ 3,90</p>
-            </div>
-        </section>
-
-        <h2>Por fim, sua sobremesa </h2>
-
-        <section >
-
-            <div class="item-sobremesa">
-                <img src="./img/pudim.png" >
-                <h3>Pudim</h3>
-                
-                <div class="descricaoPrato">
-                    <p>Apenas pudim</p>
-                </div>
-
-                <p class="bebida-sobremesa">R$ 5,90</p>
-            </div>
-
-            <div class="item-sobremesa">
-                <img src="./img/pudim.png" >
-                <h3>Pudim</h3>
-                
-                <div class="descricaoPrato">
-                    <p>Apenas pudim</p>
-                </div>
-
-                <p class="bebida-sobremesa">R$ 7,90</p>
-            </div>
-
-            <div class="item-sobremesa">
-                <img src="./img/pudim.png" >
-                <h3>Pudim</h3>
-                
-                <div class="descricaoPrato">
-                    <p>Apenas pudim</p>
-                </div>
-
-                <p class="bebida-sobremesa">R$ 10,90</p>
-            </div>
-        </section>    
-        </main>
-
-        <footer>
-            <div class="fechar-pedido">
-
-                <button> 
-                    <p>Selecione os 3 itens </p>
-                    <p>para fechar o pedido</p>
-                </button>
-
-            </div>
-        </footer>
     
-    </div>
+</head>
+<body>  
+    <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+    </header>
 
+    <main>
+    
+    <h2>Primeiro, seu prato </h2>
+    
+    <section class="pratos">
+
+        <div class="item" onclick="selecionarPrato(this)" >
+                <img src="./img/frango_yin_yang.png" >
+                <h3>Frango Yin Yang P</h3>
+                
+                <div class="descricaoPrato">
+                    <p>Um pouco de batata</p>
+                    <p>um pouco de salada</p>
+                </div>
+
+                <p class="price">R$ 14,90</p>
+
+                <img class="icone" src="./img/vector.png" alt="">
+        </div>
+
+        <div class="item" onclick="selecionarPrato(this)">
+            <img src="./img/frango_yin_yang.png" >
+            <h3>Frango Yin Yang M</h3>
+            
+            <div class="descricaoPrato">
+                <p>Um pouco de batata</p>
+                <p>um pouco de salada</p>
+            </div>
+
+            <p class="price">R$ 18,90</p>
+            <img class="icone" src="./img/vector.png" alt="">
+        </div>
+
+        <div class="item" onclick="selecionarPrato(this)">
+            <img src="./img/frango_yin_yang.png" >
+            <h3>Frango Yin Yang G</h3>
+            
+            <div class="descricaoPrato">
+                <p>Um pouco de batata</p>
+                <p>um pouco de salada</p>
+            </div>
+
+            <p class="price">R$ 20,90</p>
+            <img class="icone" src="./img/vector.png" alt="">
+        </div>
+    </section>
+
+    <h2>Agora, sua bebida </h2>
+
+    <section class="bebidas" >
+
+        <div class="item item-bebida" onclick="selecionarBebida(this)">
+            
+                <img src="./img/coca-cola.png" >
+                <h3>Coquinha gelada P</h3>
+                
+                <div class="descricaoPrato">
+                    <p>350ml</p>
+                </div>
+
+                <p class="price">R$ 5,90</p>
+                <img class="icone" src="./img/vector.png" alt="">
+            
+        </div>
+
+        <div class="item item-bebida" onclick="selecionarBebida(this)">
+            <img src="./img/coca-cola.png" >
+            <h3>Coquinha gelada M</h3>
+            
+            <div class="descricaoPrato">
+                <p>350ml</p>
+            </div>
+
+            <p class="price">R$ 4,90</p>
+            <img class="icone" src="./img/vector.png" alt="">
+        </div>
+
+        <div class="item item-bebida" onclick="selecionarBebida(this)">
+            <img src="./img/coca-cola.png" >
+            <h3>Coquinha gelada G</h3>
+            
+            <div class="descricaoPrato">
+                <p>350ml</p>
+            </div>
+
+            <p class="price">R$ 3,90</p>
+            <img class="icone" src="./img/vector.png" alt="">
+        </div>
+    </section>
+
+    <h2>Por fim, sua sobremesa </h2>
+
+    <section class="sobremesas" >
+
+        <div class="item item-sobremesa" onclick="selecionarSobremesa(this)">
+            <img src="./img/pudim.png" >
+            <h3>Pudim P</h3>
+            
+            <div class="descricaoPrato">
+                <p>Apenas pudim</p>
+            </div>
+
+            <p class="price">R$ 5,90</p>
+            <img class="icone invisible" src="./img/vector.png" alt="">
+        </div>
+
+        <div class="item item-sobremesa" onclick="selecionarSobremesa(this)">
+            <img src="./img/pudim.png" >
+            <h3>Pudim M</h3>
+            
+            <div class="descricaoPrato">
+                <p>Apenas pudim</p>
+            </div>
+
+            <p class="price">R$ 7,90</p>
+            <img class="icone invisible" src="./img/vector.png" alt="">
+        </div>
+
+        <div class="item item-sobremesa" onclick="selecionarSobremesa(this)">
+            <img src="./img/pudim.png" >
+            <h3>Pudim G</h3>
+            
+            <div class="descricaoPrato">
+                <p>Apenas pudim</p>
+            </div>
+
+            <p class="price">R$ 10,90</p>
+            <img class="icone invisible" src="./img/vector.png" alt="">
+        </div>
+    </section>    
+    </main>
+
+    <footer>
+        <div class="fechar-pedido">
+
+            <button disabled onclick="fecharPedido()" > 
+                Selecione os 3 itens <br />para fechar o pedido
+            </button>
+
+        </div>
+    </footer>
+    
+    <div class="modal">
+        <div class="modal-content">
+            <h4>Confirme seu pedido</h4>
+            <table class="pedido"></table>
+            <button class="botao-pedido" onclick="confirmaPedido()">Tudo certo, pode pedir!</button>
+            <button class="botao-cancelar" onclick="voltar()">Cancelar</button>
+        </div>   
+    </div>
+    <script src="./js/script.js"></script>
 
 </body>
 </html>
