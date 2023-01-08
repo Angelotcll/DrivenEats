@@ -35,10 +35,10 @@ function selecionarBebida(bebida) {
     bebidaAnterior.classList.remove("selected");
   }
 
-  bebida.classList.add("selected"); 
+  bebida.classList.add("selected");
   nomeBebida = bebida.querySelector("h3").innerText;
-  precoBebida = converterPrecoNumero(bebida.querySelector(".price").innerText);   
-  contarSelecionados(); 
+  precoBebida = converterPrecoNumero(bebida.querySelector(".price").innerText);
+  contarSelecionados();
 }
 
 function selecionarSobremesa(sobremesa) {
@@ -52,7 +52,7 @@ function selecionarSobremesa(sobremesa) {
   nomeSobremesa = sobremesa.querySelector("h3").innerText;
   precoSobremesa = converterPrecoNumero(sobremesa.querySelector(".price").innerText);
 
-  contarSelecionados();  
+  contarSelecionados();
 }
 
 function contarSelecionados(){
@@ -78,7 +78,7 @@ function fecharPedido(){
   const precoTotal = precoPrato + precoBebida + precoSobremesa;
   let conteudoTabela = "";
   
-  conteudoTabela += `<tr> <th>${scope=" "} </th>  <th> ${scope=""} </th> </tr>`
+  conteudoTabela += `<tr> <th>${scope=""} </th>  <th> ${scope=""} </th> </tr>`;
   conteudoTabela += `<tr> <td>${nomePrato}</td> <td>${converterNumeroPreco(precoPrato)}</td> </tr>`;
   conteudoTabela += `<tr> <td>${nomeBebida}</td> <td>${converterNumeroPreco(precoBebida)}</td> </tr>`;
   conteudoTabela += `<tr> <td>${nomeSobremesa}</td> <td>${converterNumeroPreco(precoSobremesa)}</td> </tr>`;
