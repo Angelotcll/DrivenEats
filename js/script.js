@@ -10,7 +10,8 @@ function converterPrecoNumero(preco){
 }
 
 function converterNumeroPreco(numero){
-  return String(numero.toFixed(2)).replace(".",",");
+  const casasDecimais = 2;
+  return String(numero.toFixed(casasDecimais)).replace(".",",");
 }
 
 function selecionarPrato(prato) {
@@ -20,8 +21,7 @@ function selecionarPrato(prato) {
     pratoAnterior.classList.remove("selected");
   }
 
-  prato.classList.add("selected");   
-
+  prato.classList.add("selected");
   nomePrato = prato.querySelector("h3").innerText;
   precoPrato = converterPrecoNumero(prato.querySelector(".price").innerText);
 
@@ -36,10 +36,8 @@ function selecionarBebida(bebida) {
   }
 
   bebida.classList.add("selected"); 
-
   nomeBebida = bebida.querySelector("h3").innerText;
-  precoBebida = converterPrecoNumero(bebida.querySelector(".price").innerText);
-   
+  precoBebida = converterPrecoNumero(bebida.querySelector(".price").innerText);   
   contarSelecionados(); 
 }
 
@@ -50,8 +48,7 @@ function selecionarSobremesa(sobremesa) {
       sobremesaAnterior.classList.remove("selected");
   }
 
-  sobremesa.classList.add("selected"); 
-
+  sobremesa.classList.add("selected");
   nomeSobremesa = sobremesa.querySelector("h3").innerText;
   precoSobremesa = converterPrecoNumero(sobremesa.querySelector(".price").innerText);
 
@@ -60,8 +57,9 @@ function selecionarSobremesa(sobremesa) {
 
 function contarSelecionados(){
   const selecionados = document.querySelectorAll(".selected").length;
+  const numeroDeItensSelecionados = 3;
 
-  if(selecionados === 3){
+  if(selecionados === numeroDeItensSelecionados){
     habilitaBotao();
   }
 }
@@ -78,8 +76,9 @@ function fecharPedido(){
   const modal = document.querySelector(".modal");
   const tabela = modal.querySelector(".pedido");
   const precoTotal = precoPrato + precoBebida + precoSobremesa;
-  let conteudoTabela = "";     
+  let conteudoTabela = "";
   
+  conteudoTabela += `<tr> <th>${scope=" "} </th>  <th> ${scope=""} </th> </tr>`
   conteudoTabela += `<tr> <td>${nomePrato}</td> <td>${converterNumeroPreco(precoPrato)}</td> </tr>`;
   conteudoTabela += `<tr> <td>${nomeBebida}</td> <td>${converterNumeroPreco(precoBebida)}</td> </tr>`;
   conteudoTabela += `<tr> <td>${nomeSobremesa}</td> <td>${converterNumeroPreco(precoSobremesa)}</td> </tr>`;
@@ -98,7 +97,7 @@ function confirmaPedido(){
   const nome = prompt("Por favor, digite seu nome");
   const endereco = prompt("Por favor, digite seu endereço");
   let textoMensagem = "Olá, gostaria de fazer o pedido:\r\n";
-
+  
   textoMensagem += `- Prato: ${nomePrato}\r\n`;
   textoMensagem += `- Bebida: ${nomeBebida}\r\n`;
   textoMensagem += `- Sobremesa: ${nomeSobremesa}\r\n`;
