@@ -31,7 +31,7 @@ function selecionarPrato(prato) {
 function selecionarBebida(bebida) {
   const bebidaAnterior = document.querySelector(".bebidas .selected");
 
-  if (bebidaAnterior ) {
+  if (bebidaAnterior) {
     bebidaAnterior.classList.remove("selected");
   }
 
@@ -46,7 +46,7 @@ function selecionarBebida(bebida) {
 function selecionarSobremesa(sobremesa) {
   const sobremesaAnterior = document.querySelector(".sobremesas .selected");
 
-  if (sobremesaAnterior ) {
+  if (sobremesaAnterior) {
       sobremesaAnterior.classList.remove("selected");
   }
 

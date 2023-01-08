@@ -85,11 +85,11 @@ h1 {
     border: 5px solid #FFFFFF;
    }
 
-  .item-bebida{
+  .item .item-bebida{
     height: 202px;
   }
 
-  .item-sobremesa{
+  .item .item-sobremesa{
     height: 197px;
   }
 
