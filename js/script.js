@@ -58,22 +58,6 @@ function selecionarSobremesa(sobremesa) {
   contarSelecionados();  
 }
 
-function fecharPedido(){
-  const modal = document.querySelector(".modal");
-  const tabela = modal.querySelector(".pedido");
-  const precoTotal = precoPrato + precoBebida + precoSobremesa;
-  let conteudoTabela = "";     
-  
-  conteudoTabela += `<tr> <td>${nomePrato}</td> <td>${converterNumeroPreco(precoPrato)}</td> </tr>`;
-  conteudoTabela += `<tr> <td>${nomeBebida}</td> <td>${converterNumeroPreco(precoBebida)}</td> </tr>`;
-  conteudoTabela += `<tr> <td>${nomeSobremesa}</td> <td>${converterNumeroPreco(precoSobremesa)}</td> </tr>`;
-  conteudoTabela += `<tr> <td>Total</td> <td>R$ ${converterNumeroPreco(precoTotal)}</td> </tr>`;
-
-  tabela.innerHTML = conteudoTabela;
-
-  modal.classList.add("open");
-}
-
 function contarSelecionados(){
   const selecionados = document.querySelectorAll(".selected").length;
 
@@ -90,17 +74,37 @@ function habilitaBotao(){
   botao.removeAttribute("disabled");
 }
 
+function fecharPedido(){
+  const modal = document.querySelector(".modal");
+  const tabela = modal.querySelector(".pedido");
+  const precoTotal = precoPrato + precoBebida + precoSobremesa;
+  let conteudoTabela = "";     
+  
+  conteudoTabela += `<tr> <td>${nomePrato}</td> <td>${converterNumeroPreco(precoPrato)}</td> </tr>`;
+  conteudoTabela += `<tr> <td>${nomeBebida}</td> <td>${converterNumeroPreco(precoBebida)}</td> </tr>`;
+  conteudoTabela += `<tr> <td>${nomeSobremesa}</td> <td>${converterNumeroPreco(precoSobremesa)}</td> </tr>`;
+  conteudoTabela += `<tr> <td>Total</td> <td>R$ ${converterNumeroPreco(precoTotal)}</td> </tr>`;
+
+  tabela.innerHTML = conteudoTabela;
+
+  modal.classList.add("open");
+}
+
 function voltar(){
   document.querySelector(".modal").classList.remove("open");
 }
 
 function confirmaPedido(){
+  const nome = prompt("Por favor, digite seu nome");
+  const endereco = prompt("Por favor, digite seu endereço");
   let textoMensagem = "Olá, gostaria de fazer o pedido:\r\n";
 
   textoMensagem += `- Prato: ${nomePrato}\r\n`;
   textoMensagem += `- Bebida: ${nomeBebida}\r\n`;
   textoMensagem += `- Sobremesa: ${nomeSobremesa}\r\n`;
-  textoMensagem += `Total: ${document.querySelector(".pedido tr:last-child td:last-child").innerText}`;
+  textoMensagem += `Total: ${document.querySelector(".pedido tr:last-child td:last-child").innerText}\r\n`;
+  textoMensagem += `Nome: ${nome}\r\n`;
+  textoMensagem += `Endereço: ${endereco}\r\n`;
 
   const url = `https://wa.me/5551995752403?text=${encodeURIComponent(textoMensagem)}`;
 
