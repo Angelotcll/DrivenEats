@@ -86,7 +86,7 @@ function habilitaBotao(){
   const botao = document.querySelector(".fechar-pedido button");
 
   botao.classList.add("enabled");
-  botao.innerText = "Finalizar pedido";
+  botao.innerText = "Fechar pedido";
   botao.removeAttribute("disabled");
 }
 
