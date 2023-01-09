@@ -18,8 +18,7 @@ h1,h2{
     background-color: #e5e5e5;
     
   }
-
-
+  
   /* Formatação do cabeçalho*/
 
  header{
@@ -219,6 +218,21 @@ width: auto;
 margin: 0 auto;
 display: table;
 
+}
+
+.div-pedido{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 100%);
+  justify-content: space-between;
+  padding: 12px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  grid-template-areas: 
+    "grid-prato grid-preco-prato"
+    "grid-bebida grid-preco-bebida"
+    "grid-sobremesa grid-preco-sobremesa"
+    "grid-total grid-preco-total";
 }
 
 .pedido{
