@@ -105,7 +105,7 @@ function confirmaPedido(){
   textoMensagem += `Nome: ${nome}\r\n`;
   textoMensagem += `Endereço: ${endereco}\r\n`;
 
-  const url = `https://wa.me/5551995752403?text=${encodeURIComponent(textoMensagem)}`;
+  const url = `https://wa.me/5551999999999?text=${encodeURIComponent(textoMensagem)}`;
 
   window.location.href = url;
 }
